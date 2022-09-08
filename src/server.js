@@ -10,7 +10,8 @@ connectToDatabase();
 const app = express();
 const port = 3000;
 
-app.use(routes)
+app.use(express.json());//para o express aceitar json 
+app.use(routes);
 
 app.listen(port,() => {
   console.log(`⚡ Backend started at http://localhost:${port}`)
